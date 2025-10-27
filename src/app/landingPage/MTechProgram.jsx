@@ -24,17 +24,21 @@ export default function MTechProgram() {
             </div>
           </div>
 
-          <div className="space-y-6 text-center sm:text-left">
-            <div className="flex items-center space-x-3 text-[#1a367b] font-semibold text-lg group">
-              <Clock className="hidden sm:block w-6 h-6 group-hover:rotate-180 transition-transform duration-500" />
-              <p>Duration: 1-year full-time program</p>
-            </div>
-            <div className="flex items-center space-x-3 text-[#1a367b] font-semibold text-lg group">
-              <Briefcase className="hidden sm:block w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-              <p>Includes a 5-month paid internship</p>
-            </div>
-          </div>
-          <div className="flex text-center sm:text-left items-start space-x-3">
+          <ul className="space-y-6 list-none sm:list-none">
+            <li className="text-[#1a367b] font-semibold text-lg group">
+              <div className="flex items-center space-x-3">
+                <Clock className="hidden sm:block w-6 h-6 group-hover:rotate-180 transition-transform duration-500" />
+                <span className="sm:block before:content-['•'] before:text-[#1a367b] before:mr-2 sm:before:content-none">Duration: 1-year full-time program</span>
+              </div>
+            </li>
+            <li className="text-[#1a367b] font-semibold text-lg group">
+              <div className="flex items-center space-x-3">
+                <Briefcase className="hidden sm:block w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="sm:block before:content-['•'] before:text-[#1a367b] before:mr-2 sm:before:content-none">Includes a 5-month paid internship</span>
+              </div>
+            </li>
+          </ul>
+          <div className="sm:flex text-center hidden sm:text-left items-start space-x-3">
             <p className="text-gray-700 text-lg leading-relaxed">
               Gain real-world experience, develop specialized skills, and expand
               your global network with a degree that opens doors to top tech and

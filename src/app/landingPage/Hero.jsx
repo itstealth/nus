@@ -163,7 +163,7 @@ const Hero = () => {
           </h2>
         </div>
 
-        <ul className="list-disc list-inside text-left w-max mx-auto text-gray-600 space-y-2">
+        <ul className="list-disc list-inside text-left w-max mx-auto sm:mx-0 text-gray-600 space-y-2">
           <li>
             <span className="text-[#2c2760] text-xl font-bold">
               Artificial Intelligence
