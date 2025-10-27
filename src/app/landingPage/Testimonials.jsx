@@ -33,6 +33,19 @@ const testimonials = [
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     let intervalId;
@@ -48,6 +61,11 @@ export default function Testimonials() {
       }
     };
   }, [isAutoPlaying]);
+
+  // Reset expanded state when testimonial changes
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [activeIndex]);
 
   const nextTestimonial = () => {
     setIsAutoPlaying(false);
@@ -67,7 +85,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative h-[1000px] sm:h-auto pb-16 md:pb-20 px-4 overflow-hidden">
+    <section className="relative h-full sm:h-auto pt-10 pb-0 md:pb-20 md:pt-0 px-4 overflow-hidden">
       {/* Background decorative elements */}
       <div
         className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-30 -translate-x-1/2 -translate-y-1/2"
@@ -89,20 +107,29 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="relative py-28 w-full max-w-6xl mx-auto">
+        <div className="relative py-0 sm:py-28 w-full max-w-6xl mx-auto pb-16">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`absolute my-52 sm:my-0 px-5 w-full transition-all duration-500 ease-in-out ${
+              className={`px-5 w-full transition-all duration-500 ease-in-out ${
                 index === activeIndex
                   ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-full"
+                  : "opacity-0 -translate-x-full"
+              } ${
+                isMobile 
+                  ? index === activeIndex ? "relative block" : "hidden" 
+                  : "absolute"
               }`}
-              style={{
-                transform: `translate(${(index - activeIndex) * 100}%, -50%)`,
-              }}
+              style={
+                isMobile
+                  ? {}
+                  : {
+                      transform: `translate(${(index - activeIndex) * 100}%, -50%)`,
+                      top: '50%',
+                    }
+              }
             >
-              <div className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden">
+              <div className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden mb-4">
                 <div className="flex flex-col md:flex-row items-center gap-8 p-8">
                   <div className="relative group">
                     <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
@@ -137,9 +164,21 @@ export default function Testimonials() {
                         <span className="hidden md:block">•</span>
                         <span>{testimonial.course}</span>
                       </div>
-                      <p className="text-gray-600 leading-relaxed text-lg">
-                        "{testimonial.text}"
-                      </p>
+                      <div>
+                        <p
+                          className={`text-gray-600 leading-relaxed text-lg md:line-clamp-none ${
+                            isExpanded ? "" : "line-clamp-4 md:line-clamp-none"
+                          }`}
+                        >
+                          "{testimonial.text}"
+                        </p>
+                        <button
+                          onClick={() => setIsExpanded(!isExpanded)}
+                          className="md:hidden text-blue-500 font-medium mt-2 hover:text-blue-600 transition-colors duration-200"
+                        >
+                          {isExpanded ? "Read Less" : "Read More"}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -149,11 +188,11 @@ export default function Testimonials() {
 
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-[130%] sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 -translate-x-1/2 md:-translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-blue-500 p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 md:-translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-blue-500 p-3 sm:p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50 z-10"
             aria-label="Previous testimonial"
           >
             <svg
-              className="h-3 w-3 sm:w-6 sm:h-6"
+              className="h-4 w-4 sm:w-6 sm:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -169,11 +208,11 @@ export default function Testimonials() {
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-[130%] sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 translate-x-1/2 md:translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-blue-500 p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 md:translate-x-full bg-white/80 backdrop-blur-sm hover:bg-white text-blue-500 p-3 sm:p-2 rounded-full shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50 z-10"
             aria-label="Next testimonial"
           >
             <svg
-              className="h-3 w-3 sm:w-6 sm:h-6"
+              className="h-4 w-4 sm:w-6 sm:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

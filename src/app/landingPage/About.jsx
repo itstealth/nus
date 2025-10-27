@@ -82,7 +82,7 @@ const About = () => {
                 innovation.
               </p>
 
-              <p className="text-base md:text-lg leading-relaxed text-blue-50 mb-8">
+              <p className="text-base md:text-lg sm:block hidden leading-relaxed text-blue-50 mb-8">
                 NUS-ISS also works with industry partners and associations
                 locally and globally to co-create a digital learning ecosystem
                 that inspires and shapes solutions for the digital economy.
@@ -91,31 +91,37 @@ const About = () => {
               {/* Stats section */}
               <div
                 ref={statsRef}
-                className="grid grid-cols-4 gap-4 mb-8 pt-6 border-t border-white/20"
+                className="grid sm:grid-cols-4 grid-cols-2 gap-4 mb-8 pt-6 border-t border-white/20"
               >
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">
+                  <div className="font-bold sm:text-2xl text-xl text-blue-100">
                     {leaders}
                   </div>
-                  <div className="text-sm text-blue-50">Digital Leaders & Professionals</div>
+                  <div className="text-sm text-blue-50">
+                    Digital Leaders & Professionals
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">
+                  <div className="font-bold sm:text-2xl text-xl text-blue-100">
                     {years}
                   </div>
-                  <div className="text-sm text-blue-50">Corporate Clients & Organisations</div>
+                  <div className="text-sm text-blue-50">
+                    Corporate Clients & Organisations
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">
+                  <div className="font-bold sm:text-2xl text-xl text-blue-100">
                     {universities}
                   </div>
                   <div className="text-sm text-blue-50">Programmes Alumni</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-bold text-2xl text-blue-100">
+                  <div className="font-bold sm:text-2xl text-xl text-blue-100">
                     {students}
                   </div>
-                  <div className="text-sm text-blue-50">Industry Seminars & Workshops</div>
+                  <div className="text-sm text-blue-50">
+                    Industry Seminars & Workshops
+                  </div>
                 </div>
               </div>
             </div>

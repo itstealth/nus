@@ -150,8 +150,10 @@ const Hero = () => {
       <div className="space-y-6 text-center lg:text-left">
         <div className="space-y-2 sm:space-y-4">
           <h1 className="text-[24px] leading-7 sm:text-4xl font-bold text-[#1a237e]">
-            Study at
-            <div>National University of Singapore (NUS)</div>
+            <span className="inline sm:block">Study at </span>
+            <span className="inline sm:block">
+              National University of Singapore (NUS)
+            </span>
           </h1>
           <div className="bg-[#2c2760] animate-pulse text-white text-xl sm:text-3xl font-bold py-2 px-4 inline-block rounded-sm">
             Shape Your Future
@@ -161,7 +163,7 @@ const Hero = () => {
           </h2>
         </div>
 
-        <ul className="list-disc list-inside text-gray-600 space-y-2">
+        <ul className="list-disc list-inside text-left w-max mx-auto text-gray-600 space-y-2">
           <li>
             <span className="text-[#2c2760] text-xl font-bold">
               Artificial Intelligence

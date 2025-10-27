@@ -7,12 +7,12 @@ export default function MTechProgram() {
     <div className="w-full min-h-screen flex items-center bg-[#eaeff0] p-8 md:p-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left side - Image collage */}
-        <div className="">
+        <div className="order-2 sm:order-1">
           <img src={MTechPrograms} className="w-full max-h-[500px] object-contain" alt="" />
         </div>
 
         {/* Right side - Content */}
-        <div className="space-y-8 relative">
+        <div className="space-y-8 relative order-1 sm:order-2">
           <div className="space-y-4 text-center sm:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1a367b] tracking-tight animate-fade-in">
               M.Tech Program at NUS
