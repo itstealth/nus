@@ -161,22 +161,23 @@ const Hero = () => {
           </h2>
         </div>
 
-        <p className="text-gray-700 !mt-[10px] sm:mt-6 md:max-w-xl">
-          Join the globally ranked NUS to gain in-depth knowledge in
-          cutting-edge fields like{" "}
-          <span className=" text-[#2c2760] text-lg font-bold">
-            Artificial Intelligence
-          </span>
-          ,{" "}
-          <span className=" text-[#2c2760] text-lg font-bold">
-            Business Analytics
-          </span>
-          , and{" "}
-          <span className=" text-[#2c2760] text-lg font-bold">
-            Software Engineering
-          </span>
-          .
-        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-2">
+          <li>
+            <span className="text-[#2c2760] text-xl font-bold">
+              Artificial Intelligence
+            </span>
+          </li>
+          <li>
+            <span className="text-[#2c2760] text-xl font-bold">
+              Business Analytics
+            </span>
+          </li>
+          <li>
+            <span className="text-[#2c2760] text-xl font-bold">
+              Software Engineering
+            </span>
+          </li>
+        </ul>
 
         {/* <button className="bg-[#1a237e] hover:bg-[#1a237e]/90 rounded-sm text-white px-8 py-2 text-lg">
           Apply Now
