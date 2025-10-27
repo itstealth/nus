@@ -71,7 +71,7 @@ const About = () => {
               <div className="absolute brightness-75 inset-0 opacity-10 bg-[linear-gradient(45deg,transparent_25%,white_25%,white_50%,transparent_50%,transparent_75%,white_75%,white_100%)] bg-[length:20px_20px]"></div>
 
               <h1 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text">
-                About <span className="text-blue-100">Planet Education</span>
+                About <span className="text-blue-100">NUS-ISS</span>
               </h1>
 
               <p className="text-base md:text-lg leading-relaxed text-blue-50 mb-8">

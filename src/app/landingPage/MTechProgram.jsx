@@ -14,8 +14,8 @@ export default function MTechProgram() {
         {/* Right side - Content */}
         <div className="space-y-8 relative">
           <div className="space-y-4 text-center sm:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a367b] tracking-tight animate-fade-in">
-              MTech Program at NUS
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1a367b] tracking-tight animate-fade-in">
+              M.Tech Program at NUS
             </h1>
             <div className="bg-gradient-to-br from-sky-500 to-blue-600 text-white p-4 shadow-lg transform hover:scale-[1.02] rounded-sm animate-pulse transition-all duration-300">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">

@@ -28,7 +28,7 @@ export default function ProgramSpecializations() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
+        <h1 className="text-4xl md:text-5xl font-semibold text-blue-800 mb-4">
           Program Specialisations
         </h1>
         <p className="text-lg md:text-xl text-blue-800 max-w-3xl mx-auto">
@@ -48,7 +48,7 @@ export default function ProgramSpecializations() {
               />
             </div>
             <div className="bg-gradient-to-br from-sky-500 to-blue-600 inset-0 flex items-center p-5">
-              <h3 className="text-white text-2xl sm:text-[32px] leading-[36px] text-center font-medium">
+              <h3 className="text-white text-xl leading-[36px] text-center font-medium">
                 {spec.title}
               </h3>
             </div>
