@@ -166,12 +166,12 @@ const Hero = () => {
         <ul className="list-disc list-inside text-left w-max mx-auto sm:mx-0 text-gray-600 space-y-2">
           <li>
             <span className="text-[#2c2760] text-xl font-bold">
-              Artificial Intelligence
+              Artificial Intelligence Systems
             </span>
           </li>
           <li>
             <span className="text-[#2c2760] text-xl font-bold">
-              Business Analytics
+              Enterprise Business Analytics
             </span>
           </li>
           <li>
