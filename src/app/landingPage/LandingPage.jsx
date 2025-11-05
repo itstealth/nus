@@ -13,7 +13,7 @@ const LandingPage = () => {
     <>
       <Hero />
       <About />
-      {/* <WhoShouldAttend /> */}
+      <WhoShouldAttend />
       <MTechProgram />
       <ProgramSpecializations />
       <WhoShouldApply />

@@ -3,15 +3,15 @@ import React from "react";
 const scheduleData = [
   {
     city: "Chennai",
-    date: "16 March 2025 Sunday",
+    date: "08 March 2026 Sunday",
     time: "9:00am – 5:00pm",
-    venue: "Citadines OMR Chennai",
+    venue: "Four Points by Sheraton Chennai OMR",
     address:
-      "290 Rajiv Gandhi Salai (OMR) IT Expy, Sholinganallur, Chennai, Tamil Nadu 600119",
+      "Survey No 169, Plot 1B-1A, Rajiv Gandhi Salai, Sholinganallur Chennai, Tamil Nadu 600119",
   },
   {
     city: "Hyderabad",
-    date: "18 March 2025 Tuesday",
+    date: "10 March 2026 Tuesday",
     time: "9:00am – 5:00pm",
     venue: "Red Fox Hotel Hyderabad",
     address:
@@ -19,7 +19,7 @@ const scheduleData = [
   },
   {
     city: "Pune",
-    date: "20 March 2025 Thursday",
+    date: "12 March 2026 Thursday",
     time: "9:00am – 5:00pm",
     venue: "ibis Pune Viman Nagar",
     address:
@@ -27,35 +27,35 @@ const scheduleData = [
   },
   {
     city: "Bengaluru",
-    date: "22 March 2025 Saturday",
+    date: "14 March 2026 Saturday",
     time: "9:00am – 5:00pm",
-    venue: "Bloom Hub | Outer Ring Road Marathahalli",
+    venue: "Bloom Hub | ORR Marathahalli",
     address:
       "3, Outer Ring Road Kadubeesanahalli, Panathur, Marathahalli, Bengaluru, Karnataka 560037",
   },
   {
     city: "Mumbai",
-    date: "25 March 2025 Tuesday",
+    date: "17 March 2026 Tuesday",
     time: "9:00am – 5:00pm",
     venue: "Mirage Hotel Mumbai",
     address:
       "International Airport Approach Road, Andheri East, Mumbai, Maharashtra 400059",
   },
   {
-    city: "Ahmedabad",
-    date: "27 March 2025 Thursday",
+    city: "Kochi",
+    date: "19 March 2026 Thursday",
     time: "9:00am – 5:00pm",
-    venue: "Fortune Park Ahmedabad",
+    venue: "The Avenue Regent Kochi",
     address:
-      "Opp Gujarat College, Purshottam Mavlankar Marg, Ellisbridge, Ahmedabad, Gujarat 380006",
+      "39/2026, Mahatma Gandhi Rd, Jos Junction, Pallimukku, Kochi, Ernakulam, Kerala 682016",
   },
   {
     city: "Delhi",
-    date: "30 March 2025 Sunday",
+    date: "22 March 2026 Sunday",
     time: "9:00am – 5:00pm",
-    venue: "Park Inn by Radisson New Delhi Lajpat Nagar",
+    venue: "The Muse Sarovar Portico Nehru Place",
     address:
-      "1 & 2, Ring Rd, Vikram Vihar, Lajpat Nagar IV, Lajpat Nagar 4, New Delhi, Delhi 110024",
+      "A-1, Chirag Enclave, Nehru Place, New Delhi, Delhi 110048",
   },
 ];
 
@@ -72,7 +72,7 @@ const WhoShouldAttend = () => {
             spot in one of our highly regarded MTech programs.
           </p>
           <h2 className="text-3xl sm:text-4xl animate-bounce font-bold text-white mt-8 mb-12">
-            16<sup>th</sup> March – 30<sup>th</sup> March 2025
+            8<sup>th</sup> March – 22<sup>th</sup> March 2026
           </h2>
         </div>
 
