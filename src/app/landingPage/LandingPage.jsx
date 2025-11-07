@@ -12,10 +12,10 @@ const LandingPage = () => {
   return (
     <>
       <Hero />
-      <About />
-      <WhoShouldAttend />
-      <MTechProgram />
       <ProgramSpecializations />
+      <WhoShouldAttend />
+      {/* <About /> */}
+      <MTechProgram />
       <WhoShouldApply />
       <WhyChooseNus />
       <Testimonials />

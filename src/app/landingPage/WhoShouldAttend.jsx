@@ -61,16 +61,16 @@ const scheduleData = [
 
 const WhoShouldAttend = () => {
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-sky-500 to-blue-600 py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" min-h-fit relative bg-gradient-to-br from-sky-500 to-blue-600 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Who Should Attend?
+            Event Details
           </h1>
-          <p className="text-xl sm:text-2xl text-white max-w-3xl mx-auto">
+          {/* <p className="text-xl sm:text-2xl text-white max-w-3xl mx-auto">
             The NUS MTech entrance test is your first step toward securing a
             spot in one of our highly regarded MTech programs.
-          </p>
+          </p> */}
           <h2 className="text-3xl sm:text-4xl animate-bounce font-bold text-white mt-8 mb-12">
             8<sup>th</sup> March – 22<sup>th</sup> March 2026
           </h2>
