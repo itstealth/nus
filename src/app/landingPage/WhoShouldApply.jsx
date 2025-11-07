@@ -28,21 +28,12 @@ export default function WhoShouldApply() {
               <div className="p-6">
                 <div className="bg-gradient-to-br from-sky-500 to-blue-600 text-white p-4 -mx-6 -mt-6 mb-6">
                   <h2 className="text-xl font-semibold">
-                    Master of Technology in Software Engineering (MTech SE)
+                  Software Egineering
                   </h2>
                 </div>
-                <ul className="list-disc list-inside text-gray-600 space-y-2">
-                  <li>
-                    Graduates with relevant work experience in I.T-related jobs
-                    (preferably some relevant work experience).
-                  </li>
-                  <li>
-                    Graduates who are currently working in I.T firms; such as
-                    Infosys, Wipro, CTS, TCS, Tech Mahindra, etc. (just to name
-                    a few) or consulting firms; IBM, Accenture, Deloitte
-                    Consulting, etc.
-                  </li>
-                </ul>
+              <p className="text-gray-600 space-y-2">
+              Individuals who have a few years of experience in software engineering roles and are looking to further enhance their knowledge and skills in architecting scalable, secure and smart systems and platforms
+              </p>
               </div>
             </div>
 
@@ -51,26 +42,12 @@ export default function WhoShouldApply() {
               <div className="p-6">
                 <div className="bg-gradient-to-br from-sky-500 to-blue-600 text-white p-4 -mx-6 -mt-6 mb-6">
                   <h2 className="text-xl font-semibold">
-                    Master of Technology in Artificial Intelligence Systems
-                    (MTech AIS)
+                  Artifical Intelligence
                   </h2>
                 </div>
-                <ul className="list-disc list-inside text-gray-600 space-y-2">
-                  <li>
-                    Graduates preferably some relevant working experience as an
-                    ICT professional.
-                  </li>
-                  <li>
-                    Graduates with relevant work experience in I.T-related jobs
-                    (preferably some relevant work experience).
-                  </li>
-                  <li>
-                    Graduates who are currently working in I.T firms; such as
-                    Infosys, Wipro, CTS, TCS, Tech Mahindra, etc. (just to name
-                    a few) or consulting firms; IBM, Accenture, Deloitte
-                    Consulting, etc.
-                  </li>
-                </ul>
+               <p className="text-gray-600 space-y-2">
+               Software developers, business analysts, domain experts, scientists, and engineers who wish to be able to design and build systems that utilise Artificial Intelligence and other Smart Systems techniques.
+               </p>
               </div>
             </div>
 
@@ -79,21 +56,23 @@ export default function WhoShouldApply() {
               <div className="p-6">
                 <div className="bg-gradient-to-br from-sky-500 to-blue-600 text-white p-4 -mx-6 -mt-6 mb-6">
                   <h2 className="text-xl font-semibold">
-                    Master of Technology in Enterprise Business Analytics (MTech
-                    EBAC)
+                  Enterprise Business Analytics
                   </h2>
                 </div>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
                   <li>
-                    Candidates preferably with some relevant experience with
-                    quantitative skills
+                  IT professionals who wish to carve a new career in the area of analytics
                   </li>
                   <li>
-                    Graduates having Bachelor's degree preferably in Finance,
-                    Accountancy, Mathematics, Statistics, Econometrics,
-                    Management Science, Engineering, Computer Science & IT, etc.
+                  Research professionals in quantitative disciplines, who wish to increase proficiency in the area of business analytics
                   </li>
-                  <li>Freshers are welcome to apply</li>
+                  <li>Marketing professionals who wish to leverage data for better targeting and achieve increased business growth</li>
+                  <li>
+                  Data and business analysts who are interested to upskill or cross-skill in the field of business analytics
+                  </li>
+                  <li>
+                  Individuals who would like to incorporate data analytics for planning, forecasting, increasing productivity and better decision making
+                  </li>
                 </ul>
               </div>
             </div>
