@@ -19,17 +19,17 @@ const Hero = () => {
       phone: e.target["Contact No"].value,
       email: e.target.Email.value,
       city: e.target.City.value,
+      graduation: e.target.Graduation.value,
       qualification: e.target.Qualification.value,
       program: e.target["Program of Interest"].value,
     };
 
-
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycby1tNjzI09CaJSZC02g72fEqHzknSmzW0XyNuvSK41VXcVNikJCjVm5ZnDR8VQhBC6e/exec", 
+        "https://script.google.com/macros/s/AKfycby1tNjzI09CaJSZC02g72fEqHzknSmzW0XyNuvSK41VXcVNikJCjVm5ZnDR8VQhBC6e/exec",
         {
           method: "POST",
-          body: `name=${formData.name}&phone=${formData.phone}&email=${formData.email}&city=${formData.city}&qualification=${formData.qualification}&program=${formData.program}`,
+          body: `name=${formData.name}&phone=${formData.phone}&email=${formData.email}&city=${formData.city}&graduation=${formData.graduation}&qualification=${formData.qualification}&program=${formData.program}`,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
@@ -59,12 +59,31 @@ const Hero = () => {
           <h1 className="text-[24px] leading-7 sm:text-4xl font-bold text-[#1a237e]">
             Study at National University of Singapore (NUS)
           </h1>
-          <div className="bg-[#2c2760] animate-pulse text-white text-xl sm:text-3xl font-bold py-2 px-4 inline-block rounded-sm">
-            Shape Your Future
+          <div className="relative inline-block text-transparent text-3xl sm:text-4xl font-bold bg-clip-text bg-gradient-to-r from-gray-700 via-gray-900 to-gray-700 animate-glow">
+            Admissions Open
           </div>
+
+          <style jsx>{`
+            @keyframes glow { 
+              0% {
+                background-position: -200%;
+              }
+              50% {
+                text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+              }
+              100% {
+                background-position: 200%;
+              }
+            }
+
+            .animate-glow {
+              background-size: 200% auto;
+              animation: glow 3s ease-in-out infinite;
+            }
+          `}</style>
+
           <h2 className="text-xl leading-none sm:text-2xl text-[#1a237e]">
-            with NUS 1-Year MTech Programs! <br />
-            including 5 months paid internship
+            for 1 Year M.Tech programme with <br /> 5-Months Paid Internship
           </h2>
         </div>
 
@@ -94,7 +113,12 @@ const Hero = () => {
         )}
 
         <form className="space-y-4" onSubmit={handleSubmit}>
-          <input placeholder="Name" name="Name" className="w-full bg-white p-2" required />
+          <input
+            placeholder="Name"
+            name="Name"
+            className="w-full bg-white p-2"
+            required
+          />
           <input
             placeholder="Contact No"
             type="tel"
@@ -109,7 +133,12 @@ const Hero = () => {
             className="w-full bg-white p-2"
             required
           />
-          <select name="City" className="w-full bg-white p-2" required defaultValue="">
+          <select
+            name="City"
+            className="w-full bg-white p-2"
+            required
+            defaultValue=""
+          >
             <option value="" disabled>
               City for Entrance Test
             </option>
@@ -118,9 +147,30 @@ const Hero = () => {
             <option value="Chennai">Chennai</option>
             <option value="Others">Others</option>
           </select>
-          <select name="Qualification" className="w-full bg-white p-2" required defaultValue="">
+          <select
+            name="Graduation"
+            className="w-full bg-white p-2"
+            required
+            defaultValue=""
+          >
             <option value="" disabled>
-              Graduate
+              Graduation
+            </option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="B.Com">B.Com</option>
+            <option value="BA">BA</option>
+            <option value="Others">Others</option>
+          </select>
+          <select
+            name="Qualification"
+            className="w-full bg-white p-2"
+            required
+            defaultValue=""
+          >
+            <option value="" disabled>
+              Graduate Year
             </option>
             <option value="2024">2024</option>
             <option value="2023">2023</option>
@@ -140,8 +190,12 @@ const Hero = () => {
             <option value="Artificial Intelligence">
               M.Tech Artificial Intelligence
             </option>
-            <option value="Business Analytics">M.Tech Business Analytics</option>
-            <option value="Software Engineering">M.Tech Software Engineering</option>
+            <option value="Business Analytics">
+              M.Tech Business Analytics
+            </option>
+            <option value="Software Engineering">
+              M.Tech Software Engineering
+            </option>
           </select>
           <button
             type="submit"

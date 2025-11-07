@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .custom-div {
-  background: linear-gradient(
-    135deg,
-    #2d7de2,
-    #4f81c7
-  ); 
-  color: white; 
-  width: 350px; 
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 80% 100%, 0 100%); 
-  clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
-} */
-
 html {
   scroll-behavior: smooth;
 }
@@ -22,9 +10,7 @@ html {
   background-color: #ffd700;
   box-sizing: border-box;
   margin: -32px 0px 0px;
-  /* max-width: 384px; */
   padding: 32px;
-  /* position: relative; */
   transform: matrix(0.9, 0, 0, 0.9, 0, 0);
   clip-path: polygon(
     80px 0,
@@ -36,21 +22,22 @@ html {
   );
 }
 
+/* 🔹 Default (mobile) hero background */
 .hero-bg {
-  background-image: url("./assets/HeroImage.webp");
+  background-image: url("./assets/HeroImage2.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bg {
-  background-image: url("./assets/WSA-BG.webp");
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: 100%;
-  background-repeat: no-repeat;
+/* 🔹 On medium screens and up, just switch the image */
+@media (min-width: 768px) {
+  .hero-bg {
+    background-image: url("./assets/HeroImage.webp");
+  }
 }
 
+/* 🔹 Optional tweaks for small screens */
 @media (max-width: 768px) {
   .hero-bg {
     background-color: rgba(255, 255, 255, 0.5);
