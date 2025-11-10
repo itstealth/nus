@@ -20,7 +20,7 @@ export default function ProgramSpecializations() {
   ];
 
   const benefits = [
-    "5 months paid internships",
+    "5-Month Recommended Paid Internship",
     "Real-world projects that enhance your learning experience",
     "Gain a global perspective by studying at one of Asia's top-ranked universities",
   ];

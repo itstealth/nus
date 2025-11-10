@@ -83,7 +83,7 @@ const Hero = () => {
           `}</style>
 
           <h2 className="text-xl leading-none sm:text-2xl text-[#1a237e]">
-            for 1 Year M.Tech programme with <br /> 5-Months Paid Internship
+            for 1 Year M.Tech programme with <br /> 5-Month Recommended Paid Internship
           </h2>
         </div>
 
