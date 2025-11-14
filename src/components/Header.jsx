@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/PE-logo.svg";
 import nus_logo from "../assets/NUS-logo.svg";
-import experience from "../assets/Experience-logo.svg";
+import experience from "../assets/26years.png";
 
 const Header = () => {
   return (

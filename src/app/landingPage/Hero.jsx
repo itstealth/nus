@@ -39,8 +39,8 @@ const Hero = () => {
       const data = await res.json();
 
       if (data.success) {
-        setMessage("✅ Form submitted successfully!");
-        e.target.reset();
+        // Redirect to thank you page after successful submission
+        window.location.href = "/thankyou.html";
       } else {
         setMessage("❌ Duplicate email or phone number found!");
       }
