@@ -1,8 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [utmParams, setUtmParams] = useState({
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+  });
+
+  // Capture UTM parameters from URL on component mount
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    setUtmParams({
+      utm_source: urlParams.get("utm_source") || "",
+      utm_medium: urlParams.get("utm_medium") || "",
+      utm_campaign: urlParams.get("utm_campaign") || "",
+    });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,14 +37,20 @@ const Hero = () => {
       graduation: e.target.Graduation.value,
       qualification: e.target.Qualification.value,
       program: e.target["Program of Interest"].value,
+      utm_source: utmParams.utm_source,
+      utm_medium: utmParams.utm_medium,
+      utm_campaign: utmParams.utm_campaign,
     };
+
+    // Encode values for URL encoding
+    const encodeValue = (value) => encodeURIComponent(value || "");
 
     try {
       const res = await fetch(
         "https://script.google.com/macros/s/AKfycby1tNjzI09CaJSZC02g72fEqHzknSmzW0XyNuvSK41VXcVNikJCjVm5ZnDR8VQhBC6e/exec",
         {
           method: "POST",
-          body: `name=${formData.name}&phone=${formData.phone}&email=${formData.email}&city=${formData.city}&graduation=${formData.graduation}&qualification=${formData.qualification}&program=${formData.program}`,
+          body: `name=${encodeValue(formData.name)}&phone=${encodeValue(formData.phone)}&email=${encodeValue(formData.email)}&city=${encodeValue(formData.city)}&graduation=${encodeValue(formData.graduation)}&qualification=${encodeValue(formData.qualification)}&program=${encodeValue(formData.program)}&utm_source=${encodeValue(formData.utm_source)}&utm_medium=${encodeValue(formData.utm_medium)}&utm_campaign=${encodeValue(formData.utm_campaign)}`,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
