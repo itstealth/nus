@@ -45,9 +45,20 @@ const Hero = () => {
     // Encode values for URL encoding
     const encodeValue = (value) => encodeURIComponent(value || "");
 
+    // Map city to respective Google Apps Script URL
+    const cityUrlMap = {
+      "Mumbai": "https://script.google.com/macros/s/AKfycbxCqHQVSLVjTM2M8OCSlm7-HTY0RccLhO7NY1CI9RNRZrUU8I52lHP7Uf6s3l_NWbldnw/exec",
+      "Delhi NCR": "https://script.google.com/macros/s/AKfycbz6qM3wSVJXyp_Jz7X_Um4tuZunvQTOASt-3XuUAh_yGp2_XW_dHgkWR0xy1AexJAwj6w/exec",
+      "Chennai": "https://script.google.com/macros/s/AKfycbzZubpMh5mfshItI4DncapDT5xkUw5VD5ZOJvlWyuMGlXyGWEFb4QgZ-KXRWEdLXunf/exec",
+      "Others": "https://script.google.com/macros/s/AKfycbz6qM3wSVJXyp_Jz7X_Um4tuZunvQTOASt-3XuUAh_yGp2_XW_dHgkWR0xy1AexJAwj6w/exec", // Others goes to Delhi NCR sheet
+    };
+
+    // Get the appropriate URL based on selected city
+    const scriptUrl = cityUrlMap[formData.city] || cityUrlMap["Delhi NCR"]; // Default to Delhi NCR if city not found
+
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycby1tNjzI09CaJSZC02g72fEqHzknSmzW0XyNuvSK41VXcVNikJCjVm5ZnDR8VQhBC6e/exec",
+        scriptUrl,
         {
           method: "POST",
           body: `name=${encodeValue(formData.name)}&phone=${encodeValue(formData.phone)}&email=${encodeValue(formData.email)}&city=${encodeValue(formData.city)}&graduation=${encodeValue(formData.graduation)}&qualification=${encodeValue(formData.qualification)}&program=${encodeValue(formData.program)}&utm_source=${encodeValue(formData.utm_source)}&utm_medium=${encodeValue(formData.utm_medium)}&utm_campaign=${encodeValue(formData.utm_campaign)}`,
